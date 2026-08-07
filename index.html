@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Damares Guerra | Transformação Capilar Feminina</title>
+<meta name="description" content="Studio Damares Guerra — o único studio de beleza feminina que une técnica, ciência e cuidado em cada transformação capilar. Agende pelo WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 150%22><rect x=%222%22 y=%222%22 width=%2296%22 height=%22146%22 rx=%2248%22 fill=%22%23a9754d%22/><path d=%22M38,40 L38,110%22 fill=%22none%22 stroke=%22%23fdf8f1%22 stroke-width=%228%22 stroke-linecap=%22round%22/><path d=%22M38,40 C58,40 66,56 66,75 C66,94 58,110 38,110%22 fill=%22none%22 stroke=%22%23fdf8f1%22 stroke-width=%228%22 stroke-linecap=%22round%22/><path d=%22M84,58 A27,27 0 1 0 66,116 L84,116%22 fill=%22none%22 stroke=%22%23fdf8f1%22 stroke-width=%228%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf5ee;
+  --bg-alt: #f2e8da;
+  --card: #ffffff;
+  --card-alt: #fbf1e6;
+  --line: #e6d6c2;
+  --orange: #a9754d;
+  --orange-dark: #8a5f3d;
+  --gold: #c9986a;
+  --text: #3a2f22;
+  --text-soft: #8a7a68;
+  --whats: #25d366;
+  --whats-dark: #1ea952;
+  --radius: 18px;
+  --max: 1080px;
+  --font-head: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-logo: "Playfair Display", Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+img, svg { max-width: 100%; }
+
+a { color: inherit; }
+
+.eyebrow {
+  display: inline-block;
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+h1, h2, h3 { font-family: var(--font-head); margin: 0; }
+
+.section-title {
+  font-size: clamp(1.4rem, 3.2vw, 2rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 14px;
+}
+
+.section-sub {
+  color: var(--text-soft);
+  font-size: 1rem;
+  max-width: 640px;
+  margin: 0 0 32px;
+}
+
+.center { text-align: center; margin-left: auto; margin-right: auto; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn:active { transform: scale(0.97); }
+
+.btn-orange {
+  background: linear-gradient(180deg, var(--gold), var(--orange-dark));
+  color: #2e1d10;
+  box-shadow: 0 10px 26px rgba(169, 117, 77, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-whats {
+  background: linear-gradient(180deg, var(--whats), var(--whats-dark));
+  color: #05300f;
+  box-shadow: 0 10px 26px rgba(37, 211, 102, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--line);
+  color: var(--text);
+}
+
+/* Top bar */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(250, 245, 238, 0.88);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.topbar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-mark {
+  width: 30px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.logo-mark rect { fill: var(--orange); }
+.logo-mark path { fill: none; stroke: #fdf8f1; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+
+.logo-word {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-word .studio-txt {
+  font-family: var(--font-logo);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 0.72rem;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+}
+
+.logo-word .name-txt {
+  font-family: var(--font-logo);
+  font-weight: 700;
+  font-size: 0.98rem;
+  letter-spacing: 1.5px;
+  color: var(--text);
+  text-transform: uppercase;
+}
+
+.topbar .btn { padding: 10px 20px; font-size: 0.8rem; }
+
+/* Hero */
+.hero {
+  padding: 60px 0 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(1.9rem, 4.4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.18;
+  margin-bottom: 18px;
+}
+
+.hero h1 span { color: var(--orange); }
+
+.hero p {
+  color: var(--text-soft);
+  font-size: 1.05rem;
+  max-width: 520px;
+  margin: 0 0 26px;
+}
+
+.hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 22px; }
+
+.hero-stats {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.hero-stats div strong {
+  display: block;
+  font-size: 1.3rem;
+  color: var(--gold);
+}
+
+.hero-stats div span {
+  font-size: 0.8rem;
+  color: var(--text-soft);
+}
+
+.hero-media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 28px;
+  background: linear-gradient(160deg, #6b4a30, #a9754d 55%, #e8cba8);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-media::after {
+  content: "✨";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-logo);
+  font-size: 6rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.18);
+}
+
+.floating-card {
+  position: absolute;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 16px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.floating-card.fc1 { top: 10%; left: 4%; }
+.floating-card.fc2 { bottom: 12%; right: 4%; color: var(--gold); max-width: 200px; }
+
+/* Generic sections */
+.section { padding: 64px 0; }
+.section.alt { background: var(--bg-alt); }
+
+/* Feature cards */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 22px;
+}
+
+.feature-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, var(--gold), var(--orange-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+
+.feature-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.feature-card p { color: var(--text-soft); font-size: 0.9rem; margin: 0; }
+
+/* Highlight banner */
+.banner {
+  border-radius: 24px;
+  background: linear-gradient(135deg, #6b4a30, #8a5f3d 60%, #a9754d);
+  padding: 46px 34px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner h2 {
+  font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.banner p {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 560px;
+  margin: 14px auto 0;
+}
+
+/* Two-col cards */
+.duo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.duo-card {
+  background: var(--card-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.duo-card h3 { font-size: 1.15rem; margin-bottom: 10px; }
+.duo-card p { color: var(--text-soft); font-size: 0.92rem; margin: 0 0 16px; }
+
+/* Stats row */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  text-align: center;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.stat-card span { color: var(--text-soft); font-size: 0.88rem; }
+
+/* Product / kit strip */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.product-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.product-img {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2e1d10;
+  font-family: var(--font-logo);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.product-body { padding: 14px 16px 18px; }
+.product-name { font-weight: 600; font-size: 0.92rem; margin: 0 0 4px; }
+.product-desc { font-size: 0.8rem; color: var(--text-soft); margin: 0 0 10px; }
+.product-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.product-price { font-weight: 700; color: var(--gold); }
+.product-buy {
+  background: var(--whats);
+  color: #05300f;
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Bio / about split */
+.split-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.split-media {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, #8a5f3d, #a9754d 70%, #e8cba8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-logo);
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.split-text p { color: var(--text-soft); margin: 0 0 14px; }
+
+/* Video card */
+.video-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.video-thumb {
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #6b4a30, #8a5f3d 60%, #a9754d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #2e1d10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  padding-left: 4px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.video-caption { padding: 14px 18px; font-size: 0.88rem; color: var(--text-soft); }
+
+/* Compare images */
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.compare-card {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: flex-end;
+  padding: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.compare-card.c1 { background: linear-gradient(160deg, #6b4a30, #a9754d); }
+.compare-card.c2 { background: linear-gradient(160deg, #8a5f3d, #c9986a); }
+
+/* CTA dark card */
+.cta-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 40px 32px;
+  text-align: center;
+}
+
+.cta-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 28px;
+  display: grid;
+  gap: 10px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.cta-card ul li {
+  color: var(--text-soft);
+  font-size: 0.92rem;
+  display: flex;
+  gap: 10px;
+}
+
+.cta-card ul li::before { content: "✓"; color: var(--orange); font-weight: 700; }
+
+/* Pricing card */
+.pricing-card {
+  background: linear-gradient(160deg, var(--card-alt), var(--bg));
+  border: 1px solid var(--orange);
+  border-radius: 24px;
+  padding: 40px 32px;
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.pricing-price {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--gold);
+  margin: 10px 0 4px;
+}
+
+.pricing-price small { font-size: 1.1rem; color: var(--text-soft); font-weight: 500; }
+
+.pricing-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 30px;
+  display: grid;
+  gap: 10px;
+  text-align: left;
+}
+
+.pricing-list li { color: var(--text-soft); font-size: 0.92rem; display: flex; gap: 10px; }
+.pricing-list li::before { content: "💇"; }
+
+/* Gifts */
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.gift-card {
+  background: var(--card);
+  border: 1px dashed var(--orange);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+}
+
+.gift-card .gift-icon { font-size: 2rem; margin-bottom: 10px; }
+.gift-card h3 { font-size: 1rem; margin-bottom: 6px; }
+.gift-card p { color: var(--text-soft); font-size: 0.85rem; margin: 0; }
+
+/* Results gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.gallery-item {
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  font-family: var(--font-logo);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Testimonials */
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.testi-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.testi-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #2e1d10;
+}
+
+.testi-head strong { display: block; font-size: 0.92rem; }
+.testi-head span { font-size: 0.78rem; color: var(--text-soft); }
+.testi-card p { color: var(--text-soft); font-size: 0.9rem; margin: 0; }
+.stars { color: var(--gold); font-size: 0.85rem; margin-bottom: 8px; }
+
+/* Chat bubbles */
+.chat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.chat-bubble {
+  background: #dcf8c6;
+  color: #1a1a1a;
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-size: 0.86rem;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.chat-bubble strong { display: block; font-size: 0.78rem; color: #075e54; margin-bottom: 4px; }
+
+/* Location */
+.map-frame {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 40px 0 24px;
+  text-align: center;
+  color: var(--text-soft);
+  font-size: 0.8rem;
+}
+
+.socials { display: flex; justify-content: center; gap: 12px; margin-bottom: 18px; }
+
+.social-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+/* Floating WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--whats-dark);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  z-index: 999;
+  text-decoration: none;
+}
+
+@media (max-width: 860px) {
+  .hero-grid, .split-grid { grid-template-columns: 1fr; }
+  .split-grid { text-align: left; }
+  .hero-media { order: -1; max-width: 340px; margin: 0 auto; }
+  .floating-card { display: none; }
+}
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/5585991605404?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio%20no%20Studio%20Damares%20Guerra" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M16 0C7.2 0 .1 7.1.1 15.9c0 2.8.7 5.5 2.1 7.9L0 32l8.4-2.2c2.3 1.3 4.9 1.9 7.6 1.9 8.8 0 15.9-7.1 15.9-15.9C31.9 7.1 24.8 0 16 0zm0 29.1c-2.4 0-4.7-.6-6.8-1.9l-.5-.3-5 1.3 1.3-4.9-.3-.5c-1.4-2.2-2.1-4.7-2.1-7.3C2.6 8.5 8.6 2.5 16 2.5S29.4 8.5 29.4 15.9 23.4 29.1 16 29.1zm7.9-9.4c-.4-.2-2.5-1.3-2.9-1.4-.4-.1-.7-.2-1 .2-.3.4-1.1 1.4-1.4 1.7-.3.3-.5.3-.9.1-.4-.2-1.8-.7-3.4-2.1-1.3-1.1-2.1-2.5-2.4-2.9-.3-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-1-2.4-1.4-3.3-.4-.9-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.5 3.9 1.7 4.2c.2.3 2.9 4.5 7.1 6.2 1 .4 1.8.7 2.4.9 1 .3 1.9.3 2.6.2.8-.1 2.5-1 2.8-2 .3-1 .3-1.8.2-2-.1-.2-.4-.3-.8-.5z"/></svg>
+</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="logo">
+      <svg class="logo-mark" viewBox="0 0 100 150" aria-hidden="true">
+        <rect x="2" y="2" width="96" height="146" rx="48"/>
+        <path d="M38,40 L38,110"/>
+        <path d="M38,40 C58,40 66,56 66,75 C66,94 58,110 38,110"/>
+        <path d="M84,58 A27,27 0 1 0 66,116 L84,116"/>
+      </svg>
+      <span class="logo-word"><span class="studio-txt">studio</span><span class="name-txt">Damares Guerra</span></span>
+    </div>
+    <a href="#agendar" class="btn btn-orange">Agendar</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Studio de beleza feminina · Horizonte, CE</span>
+        <h1>Bem-vinda ao único studio que transforma seu cabelo com <span>técnica, ciência e cuidado</span> de verdade!</h1>
+        <p>No Studio Damares Guerra você não faz só uma escova ou uma coloração — você vive uma experiência completa de autoestima, com diagnóstico personalizado e produtos profissionais selecionados a dedo.</p>
+        <div class="hero-cta">
+          <a href="https://wa.me/5585991605404?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio%20no%20Studio%20Damares%20Guerra" class="btn btn-whats" target="_blank" rel="noopener">Quero agendar minha transformação</a>
+          <a href="#servicos" class="btn btn-outline">Ver serviços</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>4,9 ★</strong><span>109 avaliações no Google</span></div>
+          <div><strong>+24 mil</strong><span>seguidoras no Instagram</span></div>
+          <div><strong>Horizonte</strong><span>Centro · Pátio Horizonte</span></div>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="floating-card fc1">✨ Diagnóstico gratuito</div>
+        <div class="floating-card fc2">💛 4,9★ · 109 avaliações no Google</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="servicos">
+    <div class="wrap">
+      <span class="eyebrow center" style="display:block">O que você vive aqui</span>
+      <h2 class="section-title center">O que está incluído no seu atendimento?</h2>
+      <p class="section-sub center">Cada visita ao Studio Damares Guerra é pensada para entregar resultado real, sem enrolação e sem depender de produtos comprados por fora.</p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <h3>Diagnóstico Capilar Personalizado</h3>
+          <p>Avaliamos fio a fio antes de qualquer procedimento, para indicar exatamente o que seu cabelo precisa.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🧴</div>
+          <h3>Produtos Profissionais Selecionados</h3>
+          <p>Usamos e vendemos apenas linhas premium testadas por nós — sem gambiarra, sem risco pro seu fio.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3>Acompanhamento Pós-Procedimento</h3>
+          <p>Você sai daqui com orientação de manutenção e suporte direto pelo WhatsApp com nossa equipe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER -->
+  <section class="section alt">
+    <div class="wrap">
+      <div class="banner">
+        <span class="eyebrow" style="color:#fff">Técnica exclusiva</span>
+        <h2>MÉTODO DAMARES GUERRA</h2>
+        <p>A metodologia exclusiva da Damares Guerra une hidratação profunda, reconstrução e coloração de precisão em um único protocolo — o mesmo que já rendeu nota 4,9 em mais de 100 avaliações no Google.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DUO CARDS -->
+  <section class="section">
+    <div class="wrap duo-grid">
+      <div class="duo-card">
+        <h3>🎁 Kit de Manutenção Incluso</h3>
+        <p>Todo procedimento estrutural sai daqui com um kit de manutenção para você prolongar o resultado em casa.</p>
+        <a href="#produtos" class="btn btn-outline">Ver produtos</a>
+      </div>
+      <div class="duo-card">
+        <h3>📋 Consultoria de Cuidados sem custo extra</h3>
+        <p>Nada de comprar produto por fora sem saber se serve pro seu cabelo. Nossa equipe te orienta sem custo adicional.</p>
+        <a href="https://wa.me/5585991605404" class="btn btn-outline" target="_blank" rel="noopener">Falar com a equipe</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section alt">
+    <div class="wrap">
+      <span class="eyebrow center" style="display:block">Não para por aí</span>
+      <h2 class="section-title center">Resultado que fala por si só</h2>
+      <div class="stats-grid">
+        <div class="stat-card"><strong>4,9 ★</strong><span>nota média com 109 avaliações no Google</span></div>
+        <div class="stat-card"><strong>+24 mil</strong><span>seguidoras acompanham o trabalho no Instagram</span></div>
+        <div class="stat-card"><strong>100%</strong><span>agendamento e atendimento direto pelo WhatsApp</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section" id="produtos">
+    <span class="eyebrow center wrap" style="display:block">Linha Home Care · Garden Hair</span>
+    <div class="wrap">
+      <h2 class="section-title center">Leve para casa os produtos do seu tratamento</h2>
+      <p class="section-sub center">Linha profissional Garden Hair selecionada pela Damares para manter o resultado da sua transformação por muito mais tempo.</p>
+      <div class="product-grid" id="product-grid"></div>
+      <div class="center" style="margin-top:26px">
+        <a href="https://wa.me/5585991605404?text=Ol%C3%A1!%20Quero%20ver%20o%20cat%C3%A1logo%20completo%20de%20produtos" class="btn btn-whats" target="_blank" rel="noopener">Abrir catálogo completo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SPLIT -->
+  <section class="section alt">
+    <div class="wrap split-grid">
+      <div class="split-media">✨</div>
+      <div class="split-text">
+        <span class="eyebrow">Por que aqui</span>
+        <h2 class="section-title">O que faz do Studio Damares Guerra o mais procurado por mulheres em Horizonte?</h2>
+        <p>Aqui não existe fórmula pronta. Cada atendimento começa com uma escuta de verdade: seu histórico capilar, sua rotina, seus objetivos. A partir disso, montamos um plano de cuidado feito sob medida — com técnica, produtos certos e acompanhamento até você ver o resultado que sempre quis.</p>
+        <p>Mais do que um salão, o Studio Damares Guerra é um espaço de autoestima, onde cada cliente sai se sentindo a melhor versão de si mesma.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="section-title center">Veja como é rápida a transformação</h2>
+      <p class="section-sub center">Antes e depois reais de clientes que passaram pelo Método Damares Guerra.</p>
+      <div class="video-card">
+        <div class="video-thumb"><span class="play-btn">▶</span></div>
+        <p class="video-caption">Transformação Loira: Antes e Depois com Damares Guerra Studio</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARE -->
+  <section class="section alt">
+    <div class="wrap">
+      <h2 class="section-title center">Por que cuidar dos fios com profissionais é o caminho mais seguro para sua beleza?</h2>
+      <div class="compare-grid" style="margin-top:26px">
+        <div class="compare-card c1">Antes: fios danificados</div>
+        <div class="compare-card c2">Depois: fios restaurados</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA CARD -->
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-card">
+        <span class="eyebrow">Motivos para agendar hoje</span>
+        <h2 class="section-title center">5 motivos pelos quais toda mulher merece se cuidar com quem entende de verdade</h2>
+        <ul>
+          <li>Diagnóstico capilar antes de qualquer procedimento</li>
+          <li>Produtos profissionais, sem risco para o seu fio</li>
+          <li>Técnicas atualizadas de coloração e reconstrução</li>
+          <li>Acompanhamento pós-procedimento incluso</li>
+          <li>Ambiente pensado para o seu bem-estar do início ao fim</li>
+        </ul>
+        <a href="https://wa.me/5585991605404" class="btn btn-orange" target="_blank" rel="noopener">Quero saber mais</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ TEASER -->
+  <section class="section alt">
+    <div class="wrap duo-grid" style="align-items:center">
+      <div>
+        <h2 class="section-title">Precisa de um diagnóstico antes de agendar?</h2>
+        <p style="color:var(--text-soft)">Sem problema! Fale com a nossa equipe pelo WhatsApp e receba uma orientação inicial antes de marcar seu horário — sem compromisso.</p>
+      </div>
+      <div class="center">
+        <a href="https://wa.me/5585991605404" class="btn btn-whats" target="_blank" rel="noopener">Falar com a equipe agora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="agendar">
+    <div class="wrap">
+      <span class="eyebrow center" style="display:block">Investimento</span>
+      <h2 class="section-title center">Qual é o investimento para sua transformação no Studio Damares Guerra?</h2>
+      <div class="pricing-card">
+        <p style="color:var(--text-soft); margin:0">Pacote Transformação Completa</p>
+        <div class="pricing-price">R$ 249<small>,90</small></div>
+        <p style="color:var(--text-soft); font-size:0.85rem; margin:0">ou em até 3x sem juros</p>
+        <ul class="pricing-list">
+          <li>Diagnóstico capilar personalizado</li>
+          <li>Hidratação + reconstrução profunda</li>
+          <li>Corte e finalização inclusos</li>
+          <li>Kit de manutenção para levar para casa</li>
+          <li>Acompanhamento pós-atendimento via WhatsApp</li>
+        </ul>
+        <a href="https://wa.me/5585991605404?text=Ol%C3%A1!%20Quero%20agendar%20o%20Pacote%20Transforma%C3%A7%C3%A3o%20Completa" class="btn btn-whats" target="_blank" rel="noopener">Quero agendar meu horário</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIFTS -->
+  <section class="section alt">
+    <div class="wrap">
+      <span class="eyebrow center" style="display:block">Bônus</span>
+      <h2 class="section-title center">Mimos especiais para as primeiras clientes do mês</h2>
+      <div class="gift-grid">
+        <div class="gift-card">
+          <div class="gift-icon">🎀</div>
+          <h3>Spray Finalizador</h3>
+          <p>Brinde exclusivo para quem agenda o Pacote Transformação Completa</p>
+        </div>
+        <div class="gift-card">
+          <div class="gift-icon">☕</div>
+          <h3>Welcome Drink</h3>
+          <p>Um momento só seu antes do atendimento começar</p>
+        </div>
+        <div class="gift-card">
+          <div class="gift-icon">📸</div>
+          <h3>Ensaio Antes/Depois</h3>
+          <p>Registro profissional da sua transformação, se você quiser levar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS GALLERY -->
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow center" style="display:block">Resultados</span>
+      <h2 class="section-title center">Resultados inegáveis e mensuráveis</h2>
+      <div class="gallery-grid" id="gallery-grid"></div>
+      <div class="center" style="margin-top:26px">
+        <a href="https://wa.me/5585991605404" class="btn btn-orange" target="_blank" rel="noopener">Quero um resultado assim</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section alt">
+    <div class="wrap">
+      <span class="eyebrow center" style="display:block">Depoimentos</span>
+      <h2 class="section-title center">Veja o que as clientes do Studio Damares Guerra estão dizendo</h2>
+      <div class="testi-grid" id="testi-grid"></div>
+    </div>
+  </section>
+
+  <!-- CHAT SCREENSHOTS -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="section-title center">Mensagens reais de quem já passou por aqui</h2>
+      <div class="chat-grid" id="chat-grid" style="margin-top:26px"></div>
+    </div>
+  </section>
+
+  <!-- OWNER BIO -->
+  <section class="section alt">
+    <div class="wrap split-grid">
+      <div class="split-media" style="order:2">✨</div>
+      <div class="split-text" style="order:1">
+        <span class="eyebrow">Sobre a fundadora</span>
+        <h2 class="section-title">Sobre Damares Guerra, a profissional por trás das transformações</h2>
+        <p>Especialista em coloração e tratamento capilar, Damares Guerra construiu sua trajetória unindo técnica apurada e sensibilidade no cuidado com cada cliente. Hoje, à frente do seu próprio studio em Horizonte, ela segue transformando não só cabelos, mas a autoestima de cada mulher que passa por lá.</p>
+        <a href="https://wa.me/5585991605404" class="btn btn-outline" target="_blank" rel="noopener">Conhecer o studio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section">
+    <div class="wrap">
+      <div class="banner">
+        <h2>Ficou com alguma dúvida?</h2>
+        <p>Fale com a nossa equipe agora mesmo pelo WhatsApp e agende sua transformação no Studio Damares Guerra.</p>
+        <div style="margin-top:24px">
+          <a href="https://wa.me/5585991605404?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio%20no%20Studio%20Damares%20Guerra" class="btn btn-whats" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="section alt">
+    <div class="wrap">
+      <h2 class="section-title center">Localização</h2>
+      <p class="section-sub center">Pátio Horizonte — Av. Presidente Castelo Branco, 3835, Lj 06, Centro, Horizonte - CE, 62880-384<br>📞 (85) 99160-5404</p>
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps?q=Damares+Guerra+Studio+-+P%C3%A1tio+Horizonte,+Av.+Presidente+Castelo+Branco,+3835+-+Lj+06,+Centro,+Horizonte+-+CE,+62880-384&output=embed"
+          width="100%" height="260" style="border:0; display:block;" allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de localização do Studio Damares Guerra"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="logo center" style="justify-content:center; margin-bottom:20px">
+      <svg class="logo-mark" viewBox="0 0 100 150" aria-hidden="true">
+        <rect x="2" y="2" width="96" height="146" rx="48"/>
+        <path d="M38,40 L38,110"/>
+        <path d="M38,40 C58,40 66,56 66,75 C66,94 58,110 38,110"/>
+        <path d="M84,58 A27,27 0 1 0 66,116 L84,116"/>
+      </svg>
+      <span class="logo-word"><span class="studio-txt">studio</span><span class="name-txt">Damares Guerra</span></span>
+    </div>
+    <div class="socials">
+      <a href="https://www.instagram.com/damaresguerrastudio" aria-label="Instagram" class="social-icon" target="_blank" rel="noopener">IG</a>
+      <a href="https://wa.me/5585991605404" aria-label="WhatsApp" class="social-icon" target="_blank" rel="noopener">WA</a>
+    </div>
+    <p>© 2026 Studio Damares Guerra. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script>
+const WHATSAPP_NUMBER = "5585991605404";
+
+const products = [
+  { name: "Shampoo Force Açaí", desc: "Óleo de açaí · sem sal · uso diário · 300ml", price: "89,90", color: ["#9b82e0", "#5a3fa8"] },
+  { name: "Máscara Force Açaí", desc: "Extrato de açaí · cabelos ressecados e sem balanço · 250g", price: "99,90", color: ["#8a6fd0", "#4d3591"] },
+  { name: "Shampoo Cotton", desc: "Extrato de algodão · sem sal · uso diário · 300ml", price: "89,90", color: ["#aee0f5", "#5fb3e0"] },
+  { name: "Máscara Cotton", desc: "Hidratação profunda · cabelos desidratados e sem maciez · 250g", price: "99,90", color: ["#9dd8f2", "#4a9fd6"] },
+  { name: "Shampoo Defined Curls", desc: "Aveia e colágeno · sem sal · uso diário · 300ml", price: "89,90", color: ["#6fe0d8", "#1fa89e"] },
+  { name: "Modelador Defined Curls", desc: "Colágeno vegetal + pantenol · proteção contra sol e cloro · 300ml", price: "94,90", color: ["#4fd4cc", "#178a82"] },
+  { name: "Máscara Defined Curls", desc: "Óleo de girassol e argan · cabelos volumosos e cacheados · 250g", price: "99,90", color: ["#5fdad2", "#149490"] },
+  { name: "Shampoo Engrossador", desc: "Biotina + Reparage® · cabelos com afinamento · 300ml", price: "89,90", color: ["#e8555f", "#a3202b"] },
+  { name: "Máscara Engrossador", desc: "Ácido fólico + biotina · repara, trata e protege · 250g", price: "99,90", color: ["#d63c47", "#8f1b24"] },
+];
+
+const gallery = [
+  { label: "Loiro Iluminado", color: ["#f0d9a8", "#c9973f"] },
+  { label: "Ruivo Intenso", color: ["#d68f5b", "#a85c34"] },
+  { label: "Cacheado Definido", color: ["#c98a6b", "#8a4f36"] },
+  { label: "Liso dos Sonhos", color: ["#c9c2b0", "#8a8270"] },
+  { label: "Balayage Dourado", color: ["#e8c27a", "#8a642a"] },
+  { label: "Platinado", color: ["#d9d0bd", "#a99a7c"] },
+];
+
+const testimonials = [
+  { name: "Marina Costa", role: "Cliente desde 2023", text: "Nunca cuidaram tão bem do meu cabelo. O diagnóstico antes de tudo faz toda diferença!", initials: "MC" },
+  { name: "Fernanda Lima", role: "Cliente desde 2022", text: "Saí de lá outra mulher. O Método Damares Guerra realmente funciona.", initials: "FL" },
+  { name: "Juliana Alves", role: "Cliente desde 2024", text: "Atendimento impecável e produtos de altíssima qualidade. Recomendo demais!", initials: "JA" },
+];
+
+const chats = [
+  { name: "Camila R.", text: "Gente, meu cabelo ficou perfeito! Já agendei o retorno 🥰" },
+  { name: "Beatriz S.", text: "Obrigada pelo carinho no atendimento de hoje, ficou incrível!" },
+  { name: "Larissa M.", text: "Recebi o kit de manutenção certinho, super recomendo o studio!" },
+];
+
+function initials(name) {
+  return name.split(" ").filter(w => w.length > 2).slice(0, 2).map(w => w[0]).join("").toUpperCase();
+}
+
+function renderProducts() {
+  const grid = document.getElementById("product-grid");
+  if (!grid) return;
+  const fragment = document.createDocumentFragment();
+  products.forEach(product => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+    const message = encodeURIComponent(`Olá! Tenho interesse no produto: ${product.name} (R$ ${product.price})`);
+    card.innerHTML = `
+      <div class="product-img" style="background: linear-gradient(135deg, ${product.color[0]}, ${product.color[1]})">${initials(product.name)}</div>
+      <div class="product-body">
+        <p class="product-name">${product.name}</p>
+        <p class="product-desc">${product.desc}</p>
+        <div class="product-footer">
+          <span class="product-price">R$ ${product.price}</span>
+          <a class="product-buy" href="https://wa.me/${WHATSAPP_NUMBER}?text=${message}" target="_blank" rel="noopener">Comprar</a>
+        </div>
+      </div>`;
+    fragment.appendChild(card);
+  });
+  grid.appendChild(fragment);
+}
+
+function renderGallery() {
+  const grid = document.getElementById("gallery-grid");
+  if (!grid) return;
+  const fragment = document.createDocumentFragment();
+  gallery.forEach(item => {
+    const el = document.createElement("div");
+    el.className = "gallery-item";
+    el.style.background = `linear-gradient(135deg, ${item.color[0]}, ${item.color[1]})`;
+    el.textContent = item.label;
+    fragment.appendChild(el);
+  });
+  grid.appendChild(fragment);
+}
+
+function renderTestimonials() {
+  const grid = document.getElementById("testi-grid");
+  if (!grid) return;
+  const fragment = document.createDocumentFragment();
+  testimonials.forEach(t => {
+    const card = document.createElement("div");
+    card.className = "testi-card";
+    card.innerHTML = `
+      <div class="stars">★★★★★</div>
+      <p>“${t.text}”</p>
+      <div class="testi-head" style="margin-top:14px; margin-bottom:0">
+        <div class="avatar" style="background: linear-gradient(145deg, #c9986a, #8a5f3d)">${t.initials}</div>
+        <div><strong>${t.name}</strong><span>${t.role}</span></div>
+      </div>`;
+    fragment.appendChild(card);
+  });
+  grid.appendChild(fragment);
+}
+
+function renderChats() {
+  const grid = document.getElementById("chat-grid");
+  if (!grid) return;
+  const fragment = document.createDocumentFragment();
+  chats.forEach(c => {
+    const bubble = document.createElement("div");
+    bubble.className = "chat-bubble";
+    bubble.innerHTML = `<strong>${c.name}</strong>${c.text}`;
+    fragment.appendChild(bubble);
+  });
+  grid.appendChild(fragment);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderProducts();
+  renderGallery();
+  renderTestimonials();
+  renderChats();
+});
+</script>
+</body>
+</html>
