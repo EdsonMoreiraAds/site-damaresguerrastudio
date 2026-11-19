@@ -1,0 +1,38 @@
+name: agent-build
+on:
+  push: { tags: ["agent-v*"] }
+  workflow_dispatch:
+permissions: { contents: write }
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: evolua-notas/agent } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements.txt pytest && python -m pytest -q tests
+  build:
+    needs: test
+    strategy:
+      matrix: { os: [windows-latest, macos-latest] }
+    runs-on: ${{ matrix.os }}
+    defaults: { run: { working-directory: evolua-notas/agent } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements.txt pyinstaller
+      - name: Empacota (um executável, com os esquemas XSD embutidos)
+        shell: bash
+        run: |
+          pyinstaller --onefile --name evolua-agent --paths evolua_agent/_ref \
+            --add-data "evolua_agent/_ref/schemas:schemas" \
+            --add-data "evolua_agent/_ref/schemas_restrita:schemas_restrita" \
+            --hidden-import keyring.backends.Windows --hidden-import keyring.backends.macOS \
+            --collect-all signxml entry.py
+      - name: Teste de fumaça do executável
+        shell: bash
+        run: ./dist/evolua-agent* autoteste
+      - uses: actions/upload-artifact@v4
+        with: { name: "evolua-agent-${{ matrix.os }}", path: "evolua-notas/agent/dist/*" }

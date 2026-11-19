@@ -23,6 +23,7 @@ npm run dev
 
 | Comando | O que faz |
 |---|---|
+| `cd agent && python -m pytest tests` | testes do agente local |
 | `npm test` | testes unitários (validação de CNPJ/CPF, cobrança, status, emissor simulado) |
 | `npm run test:db` | aplica as migrações num Postgres local descartável e roda mais de 30 verificações de RLS, idempotência e consumo |
 | `npm run typecheck` / `npm run build` | tipos e build de produção |
@@ -37,9 +38,16 @@ Banco: aplique `supabase/migrations/0001..0003` (Supabase CLI `supabase db push`
 - **Edição depois da aprovação** muda o hash do conteúdo e devolve a nota à revisão; o envio só aceita nota cujo hash aprovado = hash atual.
 - **Envio idempotente**: a nota é travada (`FOR UPDATE`), existe no máximo uma tentativa em aberto e uma autorização por solicitação (índices únicos). Timeout nunca reenvia: a nota vai para *Em verificação* e o operador usa **Consultar resultado**.
 - **Consumo**: uma linha em `usage_ledger` por nota autorizada **em produção** (`unique(request_id)`); homologação, rejeições e duplicidades não entram.
-- **Emissor**: `simulado` (só homologação, sem valor fiscal) ou **agente local** que guarda o certificado A1 no computador do cliente (`docs/REFERENCIA-EMISSOR.md`, `agent/README.md`).
+- **Emissor**: `simulado` (só homologação, sem valor fiscal) ou **agente local** que guarda o certificado A1 no computador do cliente (`docs/REFERENCIA-EMISSOR.md`, `agent/PROTOCOLO.md`).
 
 ## Estado atual (honesto)
 
 Pronto e testado: modelo de dados, RLS, fluxo completo em homologação simulada, consumo, plano, equipe/convites, auditoria, API do agente.
-**Não existe ainda**: o programa do agente local (protocolo definido em `agent/README.md`; o código-base é o emissor de referência em Python), cobrança automática, importação por Gmail, PDF do DANFSe no modo simulado. **Nenhuma nota real foi emitida** — a primeira emissão em produção exige o agente e a validação em homologação com o certificado do cliente.
+**Agente local** (`agent/`): escrito, com 10 testes (assinatura real, XSD, SEFIN simulada) e executável para Windows/macOS gerado pela CI (`agent-v*`); testado aqui só em Linux e **nunca contra a SEFIN real**.
+**Não existe ainda**: cobrança automática, importação por Gmail, suporte a certificado A3/A1 em nuvem, assinatura do instalador (Microsoft/Apple), PDF no modo simulado. **Nenhuma nota real foi emitida** — a primeira emissão exige validar em homologação (produção restrita) com o certificado do cliente.
+
+## Dispositivos
+| Dispositivo | Uso |
+|---|---|
+| Windows / macOS com o certificado A1 | roda o agente (emite) e o painel |
+| iPhone / iPad / Android | painel instalável (PWA: *Compartilhar → Adicionar à Tela de Início*) — criar, aprovar, acompanhar, baixar XML. **Não emite**: o iOS não guarda o .pfx nem abre mTLS com certificado de cliente |

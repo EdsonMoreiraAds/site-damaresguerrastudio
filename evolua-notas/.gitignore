@@ -4,3 +4,7 @@ node_modules
 !.env.example
 *.tsbuildinfo
 next-env.d.ts
+
+# certificados nunca no repositório
+*.pfx
+*.p12

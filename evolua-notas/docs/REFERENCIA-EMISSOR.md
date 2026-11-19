@@ -21,8 +21,8 @@ Python local → monta a **DPS** (XML) → valida no XSD oficial → assina com 
 | Escopo: Simples ME/EPP, ISS tributável não retido, tomador no Brasil, sem IBS/CBS | mantido como perfil piloto (`perfil_fiscal`) |
 
 ## Pendências para a primeira nota real
-- Escrever o agente (adaptar o Python do emissor ao protocolo de `agent/README.md`).
+- ~~Escrever o agente~~ feito em `agent/` (reaproveita `_ref/`, protocolo em `agent/PROTOCOLO.md`). Falta validar contra a produção restrita com um certificado real.
 - Decidir o tratamento do `finNFSe`/NT 009 por ambiente.
-- Gerar o PDF no agente (DANFSe) e enviá-lo em `pdf_base64`.
+- PDF (DANFSe): o agente gera se houver molde `danfse_modelo.pdf`; sem ele, o XML é o documento e o PDF sai da consulta pública.
 - Cancelamento/substituição de nota: fora do MVP (o emissor de referência também as deixa para o portal).
 - Validar com a contabilidade de cada cliente os códigos de serviço e a alíquota — responsabilidade deles, não do sistema.
