@@ -1,0 +1,24 @@
+name: evolua-notas
+on:
+  push: { paths: ["evolua-notas/**"] }
+  pull_request: { paths: ["evolua-notas/**"] }
+defaults: { run: { working-directory: evolua-notas } }
+permissions: { contents: read }
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm, cache-dependency-path: evolua-notas/package-lock.json }
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: sudo apt-get update && sudo apt-get install -y postgresql
+      - run: npm run test:db
+      - run: npm run build
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: https://example.supabase.co
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ci
+          NEXT_PUBLIC_SITE_URL: http://localhost:3000
+          SUPABASE_SERVICE_ROLE_KEY: ci
